@@ -1,3 +1,3 @@
-module github.com/stellarisjay/bareGo
+module github.com/stellarisjay/baremetalgo
 
 go 1.19
