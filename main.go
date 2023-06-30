@@ -1,16 +1,18 @@
 package main
 
+import "github.com/stellarisjay/baremetalgo/console"
+
 func main() {
-	initUart()
-	putChar('H')
-	putChar('e')
-	putChar('l')
-	putChar('l')
-	putChar('o')
-	putChar(' ')
-	putChar('W')
-	putChar('o')
-	putChar('r')
-	putChar('l')
-	putChar('d')
+	console.PutChar('H')
+	console.PutChar('e')
+	console.PutChar('l')
+	console.PutChar('l')
+	console.PutChar('o')
+	console.PutChar(' ')
+	console.PutChar('W')
+	console.PutChar('o')
+	console.PutChar('r')
+	console.PutChar('l')
+	console.PutChar('d')
+	console.PutChar('\n')
 }

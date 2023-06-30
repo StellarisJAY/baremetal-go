@@ -1,4 +1,4 @@
-package main
+package console
 
 import "unsafe"
 
@@ -20,7 +20,7 @@ const (
 	LCR_BAUD_LATCH  byte = 1 << 7 // DLAB, DLL DLM accessible
 )
 
-func initUart() {
+func init() {
 	// 关闭中断
 	writeRegister(IER, 0x0)
 	// DLAB
@@ -34,7 +34,7 @@ func initUart() {
 	writeRegister(FCR, FCR_FIFO_ENABLE|FCR_FIFO_CLEAR)
 }
 
-func putChar(c byte) {
+func PutChar(c byte) {
 	for {
 		// 等待写缓冲区空闲
 		if readRegister(LSR)&(1<<5) != 0 {
